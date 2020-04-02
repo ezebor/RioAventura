@@ -12,6 +12,9 @@ app.set('view engine', 'pug');
 // Añadir vistas
 app.set('views', path.join(__dirname, './views'));
 
+// Cargar una carpeta estática llamada public
+app.use(express.static('public'));
+
 // Cargar rutas
 app.use('/', routes());
 
